@@ -69,48 +69,49 @@ function getWeather(selectedValue){
           //console.log(response);
           response.then(resp => {
             var data = resp || [];
-            if(selectedValue == "A"){
-           weather.temperature.value = Math.floor(data.list[0].main.temp - KELVIN);
-            weather.description = data.list[0].weather[0].description;
-            weather.city = data.city.name;
-            weather.country = data.country;
-            weather.wind = data.list[0].wind.speed;
-          }
-      else if(selectedValue == "B"){
+      
+      if(selectedValue == "A"){
           weather.temperature.value = Math.floor(data.list[5].main.temp - KELVIN);
                   weather.description = data.list[5].weather[0].description;
                   weather.city = data.city.name;
                   weather.country = data.country;
                   weather.wind = data.list[5].wind.speed;
          }
-      else if(selectedValue == "C"){
+      else if(selectedValue == "B"){
           weather.temperature.value = Math.floor(data.list[13].main.temp - KELVIN);
                   weather.description = data.list[13].weather[0].description;
                   weather.city = data.city.name;
                   weather.country = data.country;
                   weather.wind = data.list[13].wind.speed;
          }
-      else if(selectedValue == "D"){
+      else if(selectedValue == "C"){
           weather.temperature.value = Math.floor(data.list[21].main.temp - KELVIN);
                   weather.description = data.list[21].weather[0].description;
                   weather.city = data.city.name;
                   weather.country = data.country;
                   weather.wind = data.list[21].wind.speed;
          }
-      else if(selectedValue == "E"){
+      else if(selectedValue == "D"){
           weather.temperature.value = Math.floor(data.list[29].main.temp - KELVIN);
                   weather.description = data.list[29].weather[0].description;
                   weather.city = data.city.name;
                   weather.country = data.country;
                   weather.wind = data.list[29].wind.speed;
          }
-      else{
+      else if(selectedValue == "E"){
          weather.temperature.value = Math.floor(data.list[37].main.temp - KELVIN);
                   weather.description = data.list[37].weather.description;
                   weather.city = data.city.name;
                   weather.country = data.country;
                   weather.wind = data.list[37].wind.speed;
          }
+        else{
+           weather.temperature.value = Math.floor(data.list[0].main.temp - KELVIN);
+            weather.description = data.list[0].weather[0].description;
+            weather.city = data.city.name;
+            weather.country = data.country;
+            weather.wind = data.list[0].wind.speed;
+          }
             displayWeather();
           });
         })
