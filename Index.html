@@ -1,0 +1,54 @@
+<!---    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://static.freshdev.io/fdk/2.0/assets/fresh_client.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://static.freshdev.io/fdk/2.0/assets/freshdesk.css">
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Weather App - JavaScript</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="setPosition(Position)">
+  <div class="fw-widget-wrapper">
+    <div class="logo"></div>
+  </div>
+  <div class="container">
+    <div class="app-title">
+      <p>Weather</p>
+    </div>
+    <div class="notification"><span>Hi..!</span></div>
+    <div class="weather-container">
+      <div class="search-container">
+        <input type="text" id="cityName" placeholder="enter city name">
+        <input type="submit" id="btn" value="search">
+        <select name="day" id="day" onchange="changeDay()">
+          <option value="">From Now</option>
+          <option value="A">Tomorrow</option>
+          <option value="B">DayAfter</option>
+          <option value="C">3-Days</option>
+          <option value="D">4-Days</option>
+          <option value="E">5-Days</option>
+        </select>
+      </div>
+      <div class="temperature-value">
+        <p>- °<span>C</span></p>
+      </div>
+      <div class="wind-value">
+        <p>Wind Speed : <span>m/s</span></p>
+      </div>
+      <div class="temperature-description">
+        <p> - </p>
+      </div>
+      <div class="location">
+        <p>-</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
