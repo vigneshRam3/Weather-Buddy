@@ -100,7 +100,7 @@ function getWeather(selectedValue){
          }
       else if(selectedValue == "E"){
          weather.temperature.value = Math.floor(data.list[37].main.temp - KELVIN);
-                  weather.description = data.list[37].weather.description;
+                  weather.description = data.list[37].weather[0].description;
                   weather.city = data.city.name;
                   weather.country = data.country;
                   weather.wind = data.list[37].wind.speed;
